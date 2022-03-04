@@ -1,0 +1,38 @@
+import React from "react";
+
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({ date: new Date() });
+  }
+
+  render() {
+    let hours = this.state.date.getHours();
+    let minutes = this.state.date.getMinutes();
+    const ampm = hours >= 12 ? "pm" : "am";
+
+    hours %= 12;
+    hours = hours || 12;
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
+
+    return (
+      <div className="date">
+        {hours}:{minutes} {ampm}
+      </div>
+    );
+  }
+}
+
+export default Clock;

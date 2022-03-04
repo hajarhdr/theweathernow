@@ -1,0 +1,111 @@
+.bg-01d {
+  background: rgb(125, 185, 230);
+  background:linear-gradient(130deg, rgb(125, 185, 230) 0%, rgba(125, 185, 230, 0.7) 40%, rgba(125, 185, 230,0.6) 100%);
+}
+
+.bg-02d {
+  background-color: rgb(150, 239, 245);
+  background:linear-gradient(130deg, rgb(150, 239, 245) 0%, rgba(129, 207, 212, 0.7) 40%, rgba(150, 239, 245,0.6) 100%);
+}
+
+.bg-03d {
+  background-color: rgb(156, 202, 198);
+  background:linear-gradient(130deg, rgb(156, 202, 198) 0%, rgba(117, 155, 152, 0.7) 40%, rgba(156, 202, 198,0.6) 100%);
+}
+
+.bg-04d {
+  background-color: rgb(253, 243, 166);
+  background:linear-gradient(130deg, rgb(253, 243, 166) 0%, rgba(253, 243, 166, 0.7) 40%, rgba(253, 243, 166,0.6) 100%);
+}
+
+.bg-09d {
+  background-color: rgb(45, 156, 219);
+  background:linear-gradient(130deg, rgb(45, 156, 219) 0%, rgba(37, 126, 179, 0.7) 40%, rgba(45, 156, 219,0.6) 100%);
+}
+
+.bg-10d {
+  background-color: rgb(45, 156, 219);
+  background:linear-gradient(130deg, rgb(45, 156, 219) 0%, rgba(36, 127, 180, 0.7) 40%, rgba(45, 156, 219,0.6) 100%);
+}
+
+.bg-11d {
+  background-color: rgb(209, 177, 255);
+  background:linear-gradient(130deg, rgb(209, 177, 255) 0%, rgba(177, 149, 216, 0.7) 40%, rgba(209, 177, 255,0.6) 100%);
+}
+
+.bg-13d {
+  background-color: rgb(148, 199, 175);
+  background:linear-gradient(130deg, rgb(148, 199, 175) 0%, rgba(110, 150, 131, 0.7) 40%, rgba(148, 199, 175,0.6) 100%);
+}
+
+.bg-50d {
+  background-color: rgb(130, 136, 219);
+  background:linear-gradient(130deg, rgb(130, 136, 219) 0%, rgba(103, 108, 175, 0.7) 40%, rgba(130, 136, 219,0.6) 100%);
+}
+
+.bg-04n {
+  background-color: rgb(193, 222, 244);
+  background:linear-gradient(130deg, rgb(193, 222, 244) 0%, rgba(193, 222, 244, 0.7) 40%, rgba(193, 222, 244,0.6) 100%);
+}
+.bg-02n {
+  background-color: rgb(216, 230, 241);
+  background:linear-gradient(130deg, rgb(216, 230, 241) 0%, rgba(216, 230, 241, 0.7) 40%, rgba(216, 230, 241,0.6) 100%); 
+}
+
+.bg-orange-300 {
+  background-color:#fff;
+}
+.date {
+  padding: 4px 0 6px;
+}
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+.app-cursor {
+  z-index: 1000;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #000;
+  pointer-events: none;
+  overflow: hidden;
+  position: fixed;
+}
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@media (max-width: 767px) {
+  .text-9xl {
+    font-size: 55px;
+  }
+  .sidebar {
+    width: 20rem;
+    padding-top: 1.25rem;
+  }
+  .text-6xl {
+    font-size: 40px;
+  }
+  .text-3xl {
+    font-size: 25px;
+  }
+  .icon-search{
+    font-size: 20px;
+    width: 50px;
+  }
+  .animate-bounce{
+    width: 7rem;
+  }
+  .text-2xl{
+    font-size: small;
+  }
+}
+
