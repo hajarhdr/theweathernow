@@ -2,7 +2,6 @@ import suncloud from "./suncloud.svg";
 import react from "react";
 import Clock from "./Clock";
 import "./App.css";
-
 class App extends react.Component {
   constructor(props) {
     super(props);
@@ -11,6 +10,7 @@ class App extends react.Component {
       geo: "",
       weather: "",
       inputValue: "",
+      ErrorText: ""
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,7 +28,13 @@ class App extends react.Component {
       this.setState({
         geo: geo,
         weather: weather,
+        ErrorText: ""
       });
+    }
+    else {
+      this.setState({
+        ErrorText : "Invalid location, please try again"
+      })
     }
 
     setTimeout(
@@ -49,7 +55,13 @@ class App extends react.Component {
     if (weather.weather) {
       this.setState({
         weather: weather,
+        ErrorText: ""
       });
+    }
+    else {
+      this.setState({
+        ErrorText : "Invalid location, please try again"
+      })
     }
 
     setTimeout(
@@ -89,10 +101,7 @@ class App extends react.Component {
                     type="text"
                     placeholder="Another Location..."
                   />
-                  <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-                  ></link>
+                  
                   <button
                     className="icon-search"
                     type="submit"
@@ -101,6 +110,12 @@ class App extends react.Component {
                     <i className="fa fa-search pr-4"></i>
                   </button>
                 </form>
+                {this.state.ErrorText !== '' && 
+                <div class="flex items-center text-white text-sm font-bold px-2 py-3" role="alert">
+                <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.432 0c1.34 0 2.01.912 2.01 1.957 0 1.305-1.164 2.512-2.679 2.512-1.269 0-2.009-.75-1.974-1.99C9.789 1.436 10.67 0 12.432 0zM8.309 20c-1.058 0-1.833-.652-1.093-3.524l1.214-5.092c.211-.814.246-1.141 0-1.141-.317 0-1.689.562-2.502 1.117l-.528-.88c2.572-2.186 5.531-3.467 6.801-3.467 1.057 0 1.233 1.273.705 3.23l-1.391 5.352c-.246.945-.141 1.271.106 1.271.317 0 1.357-.392 2.379-1.207l.6.814C12.098 19.02 9.365 20 8.309 20z"/></svg>
+                <p>Please enter a valid city name</p>
+              </div>
+                }
                 <div className="absolute inset-x-0 bottom-0 text-xl mb-8 border-2 rounded-full bg-white drop-shadow-2xl w-32 text-center ml-4">
                   <Clock />
                 </div>{" "}
